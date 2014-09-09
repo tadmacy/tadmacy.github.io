@@ -89,145 +89,99 @@
 <p>Also, this site can be helpful: <a href="http://eduncan911.com/software/octopress-powershell-and-posh-git-oh-my.html">Eric Duncan&rsquo;s blog</a>.</p>
 
 <p>Prerquisite: You have some experience with GitHub/git:
-* &hellip;you can create a repository
-* &hellip;you have git ed locally espcially the git shell
-* &hellip;you have used some git commands on the command line (i.e., the Win7 GUI isn&rsquo;t useful for this thing)</p>
+* you can create a repository
+* you have git ed locally espcially the git shell
+* you have used some git commands on the command line (i.e., the Win7 GUI isn&rsquo;t useful for this thing)</p>
 
-<p>Tools that I used
-* Windows 7
-* Ruby 2.0.0 (There are issues with earlier versions of Ruby that have workarounds but &hellip;)
-* <a href="https://windows.github.com/">GitHub for Windows 2.0</a>: the &ldquo;posh-git&rdquo; shell</p>
+<p>Tools that I used:</p>
 
-<ol>
+<ul>
+<li>Windows 7</li>
+<li>Ruby 2.0.0 (There are issues with earlier versions of Ruby that have workarounds but &hellip;)</li>
+<li><p><a href="https://windows.github.com/">GitHub for Windows 2.0</a>: the &ldquo;posh-git&rdquo; shell</p></li>
 <li><p>In your browser, navigate to github and create a new respository as blog. To do this you must name the new repository with your github username suffixed with &ldquo;.github.io&rdquo;, e.g., &ldquo;tadmacy.github.io&rdquo;. The blog will have the URL &ldquo;<a href="https://username.github.io">https://username.github.io</a>&rdquo; unless you wish to apply a custom domain. See the github docs for more info.</p>
 
-<p> After clicking &ldquo;Create&rdquo;, you&rsquo;ll see a screen like this one.
- <img src="../images/snaps/github-repo-create..png" title="Repo setup page" alt="alt text" /></p>
+<p>After clicking &ldquo;Create&rdquo;, you&rsquo;ll see a screen like this one.</p>
 
-<p> Make sure that the blog is empty, i.e., no README.md. Don&rsquo;t clone it or pull it to your local host.</p>
+<p><img src="../images/snaps/github-repo-create..png" title="Repo setup page" alt="alt text" /></p>
 
-<p> We are finsihed here for now but don&rsquo;t close this page quite yet. While most of the remaining steps are performed in the git shell of your local desktop, we&rsquo;ll need to come back here to get the &ldquo;HTTP&rdquo; URL shown near the top of the page in the &ldquo;Quick setup&rdquo; block.</p></li>
-</ol>
+<p>Make sure that the blog is empty, i.e., no README.md. Don&rsquo;t clone it or pull it to your local host.</p>
 
+<p>We are finsihed here for now but don&rsquo;t close this page quite yet. While most of the remaining steps are performed in the git shell of your local desktop, we&rsquo;ll need to come back here to get the &ldquo;HTTP&rdquo; URL shown near the top of the page in the &ldquo;Quick setup&rdquo; block.</p>
 
-<blockquote><p>Note that steps 2 - 4 below follow the <a href="http://octopress.org/docs/setup/">Octopress instructions</a> exactly. It is only when on the <a href="http://octopress.org/docs/deploying/github/">Deploying to GitHub</a> page that some variations may be needed.</p></blockquote>
+<blockquote><p>Note that steps 2 - 4 below follow the <a href="http://octopress.org/docs/setup/">Octopress instructions</a> exactly. It is only when on the <a href="http://octopress.org/docs/deploying/github/">Deploying to GitHub</a> page that some variations may be needed.</p></blockquote></li>
+<li><p>In your desktop, open the command shell and navigate to your github workspace.</p>
 
-<ol>
-<li>In your desktop, open the command shell and navigate to your github workspace.</li>
-</ol>
+<pre><code>cd &lt;your-git-project-folder&gt;
+</code></pre>
 
+<p>Use git to clone the Octopress framework as the basis for your blog. Your blog &ldquo;repo&rdquo; begins its life as a clone of the [<a href="https://github.com/imathis/octopress">https://github.com/imathis/octopress</a>].</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;your-git-project-folder&gt;</span></code></pre></td></tr></table></div></figure>
+<pre><code>git clone git://github.com/imathis/octopress.git &lt;your-blog-name&gt;
+</code></pre></li>
+<li><p>Now we need to unpack the Octopress files:</p>
 
+<pre><code>cd &lt;your-blog-name&gt;
+bundle install
+</code></pre>
 
-<p>&mdash; Use git to clone the Octopress framework as the basis for your blog. Your blog &ldquo;repo&rdquo; begins its life as a clone of the [<a href="https://github.com/imathis/octopress">https://github.com/imathis/octopress</a>].</p>
+<p>After some gems are checked or installed, the install process should end on success.</p></li>
+<li><p>Next, we run the Octpress action script like this:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git &lt;your-blog-name&gt;</span></code></pre></td></tr></table></div></figure>
+<pre><code>rake install
+</code></pre>
 
+<p>This makes a few new folders. When it finishes, note that the command prompt changes. It now includes a change count indicator following &ldquo;master&rdquo;. The changes are in red because they have not been comitted yet.</p></li>
+<li><p>Now, we need to add the github blogging support framework. So, run this:</p>
 
-<ol>
-<li>Now we need to unpack the Octopress files:</li>
-</ol>
+<pre><code>rake setup_github_pages
+</code></pre>
 
+<p>This command will ask you for the URL of the remote repository. Get the correct URL from the github page in of step 1. Your HTTP URL shown at the top of the page in the &ldquo;Quick setup&rdquo; block.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;your-blog-name&gt;
-</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
+<p>Among many changes, note that a &ldquo;source&rdquo; branch has been created. Your shell prompt has changed, too. Now &ldquo;master&rdquo; is &ldquo;source&rdquo;. And there are more uncommited materials.</p>
 
+<blockquote><p>More detailed information on this setup process can be found on <a href="http://octopress.org/docs/deploying/github/">the Octopress site</a>.</p></blockquote></li>
+<li><p>At this point the <a href="http://octopress.org/docs/deploying/github/">Octopress documentation</a> seems to miss a step. Or, more accurately, the rake scripts miss an important step: setting the git origin for the &ldquo;_deploy&rdquo; folder just created. To fix that, do this:</p>
 
-<p>   After some gems are checked or installed, the install process should end on success.</p>
+<pre><code>[source +2 ~3 -0 !]&gt; cd .\_deploy
+[master]&gt; git remote set-url origin https://github.com/tadmacy/tadmacy.github.io.git
+</code></pre>
 
-<ol>
-<li>Next, we run the Octpress action script like this:</li>
-</ol>
+<p>You can use the git remote command to verify that origin is properly set:</p>
 
+<pre><code>[master]&gt; git remote -v
+</code></pre>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
+<p>Don&rsquo;t forget to do a &ldquo;cd ..&rdquo; to get back the the &ldquo;source&rdquo; branch.</p>
 
+<p>In your &ldquo;source&rdquo; branch, you want to verify that the origin URL is correctly set. Do that using the process above while in the &ldquo;source&rdquo;.</p>
 
-<p>   This makes a few new folders. When it finishes, note that the command prompt changes. It now includes a change count indicator following &ldquo;master&rdquo;. The changes are in red because they have not been comitted yet.</p>
+<p>Some people report that the origin is not set for source either, but it was okay in my install.</p></li>
+<li><p>You should now be able to commit changes to github (be sure you are in &ldquo;source&rdquo;) with the two following commands:</p>
 
-<ol>
-<li>Now, we need to add the github blogging support framework. So, run this:</li>
-</ol>
+<pre><code>[source +2 ~3 -0 !]&gt; rake generate
+[source +2 ~3 -0 !]&gt; rake deploy
+</code></pre>
 
+<p>Watch for errors. Hope you had none and are ready to move on!</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
+<p>By the way, there is a sortcut command that does these two things.</p>
 
+<pre><code>[source +2 ~3 -0 !] rake gen_deploy
+</code></pre></li>
+<li><p>You may have noticed that we did not commit the changes. Let&rsquo;s do that now. In &ldquo;source&rdquo;:</p>
 
-<p>   This command will ask you for the URL of the remote repository. Get the correct URL from the github page in of step 1. Your HTTP URL shown at the top of the page in the &ldquo;Quick setup&rdquo; block.</p>
-
-<p>   Among many changes, note that a &ldquo;source&rdquo; branch has been created. Your shell prompt has changed, too. Now &ldquo;master&rdquo; is &ldquo;source&rdquo;. And there are more uncommited materials.</p>
-
-<blockquote><p>More detailed information on this setup process can be found on
-<a href="http://octopress.org/docs/deploying/github/">the Octopress site</a>.</p></blockquote>
-
-<ol>
-<li>At this point the <a href="http://octopress.org/docs/deploying/github/">Octopress documentation</a> seems to miss a step. Or, more accurately, the rake scripts miss an important step: setting the git origin for the &ldquo;_deploy&rdquo; folder just created. To fix that, do this:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !]&gt; cd .\_deploy
-</span><span class='line'>[master]&gt; git remote set-url origin https://github.com/tadmacy/tadmacy.github.io.git</span></code></pre></td></tr></table></div></figure>
-
-
-<p>   You can use the git remote command to verify that origin is properly set:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[master]&gt; git remote -v</span></code></pre></td></tr></table></div></figure>
-
-
-<p>   Don&rsquo;t forget to do a &ldquo;cd ..&rdquo; to get back the the &ldquo;source&rdquo; branch.</p>
-
-<p>   In your &ldquo;source&rdquo; branch, you want to verify that the origin URL is correctly set. Do that using the process above while in the &ldquo;source&rdquo;.</p>
-
-<p>   Some people report that the origin is not set for source either, but it was okay in my install.</p>
-
-<ol>
-<li>You should now be able to commit changes to github (be sure you are in &ldquo;source&rdquo;) with the two following commands:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !]&gt; rake generate
-</span><span class='line'>[source +2 ~3 -0 !]&gt; rake deploy</span></code></pre></td></tr></table></div></figure>
-
-
-<p>   Watch for errors. Hope you had none and are ready to move on!</p>
-
-<p>   By the way, there is a command that does these two things &ndash; or, at least, appears to!</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !] rake gen_deploy
-</span><span class='line'> ```
-</span><span class='line'>
-</span><span class='line'>8. You may have noticed that we did not commit the changes. Let's do that now. In "source":
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>[source +2 ~2 -0 !]> git add .
-[source +117 ~2 -0]> git commit -m &ldquo;first commit&rdquo;
-[source +117 ~2 -0]> rake gen_deploy
-&#8220;`</p>
-
-<ol>
+<pre><code>[source +2 ~2 -0 !]&gt; git add .
+[source +117 ~2 -0]&gt; git commit -m "first commit" 
+[source +117 ~2 -0]&gt; rake gen_deploy
+</code></pre></li>
 <li><p>Here&rsquo;s where I go back to github in my browser and look at the blog repository file list. You should see a lot files there now. And after a few minutes, your blog should be visible at &ldquo;<a href="http://">http://</a><your-blog-name>.github.io&rdquo;.</p></li>
 <li><p>Lastly resume the instructions at Octopress. Be sure to apply the instructions in &ldquo;Don&rsquo;t forget to commit the source for your blog.&rdquo;</p></li>
 <li><p>Next steps:</p></li>
 <li>personalize your blog by editing the &ldquo;_config.yml&rdquo; file</li>
 <li>add posts to the &ldquo;source_posts&rdquo; folder, commit them, and run rake gen_deploy to push them to your new blog.</li>
-</ol>
+</ul>
 
 </div>
 
