@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-09T16:04:23-04:00</updated>
+  <updated>2014-09-09T16:08:02-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -180,7 +180,7 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !] rake gen_deploy
 </span><span class='line'> ```
 </span><span class='line'>
-</span><span class='line'>7. But wait, there's more! You may have noticed that we did not commit the changes. Let's do that now. In "source":
+</span><span class='line'>7. You may have noticed that we did not commit the changes. Let's do that now. In "source":
 </span></code></pre></td></tr></table></div></figure>
 
 

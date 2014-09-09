@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | My Octopress Blog]]></title>
   <link href="http://tadmacy.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-09T16:04:23-04:00</updated>
+  <updated>2014-09-09T16:08:02-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -161,7 +161,7 @@ bundle install
 </code></pre>
 
 <ol>
-<li>But wait, there&rsquo;s more! You may have noticed that we did not commit the changes. Let&rsquo;s do that now. In &ldquo;source&rdquo;:</li>
+<li>You may have noticed that we did not commit the changes. Let&rsquo;s do that now. In &ldquo;source&rdquo;:</li>
 </ol>
 
 
