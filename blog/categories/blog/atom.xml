@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Blog | My Octopress Blog]]></title>
+  <link href="http://tadmacy.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
   <updated>2014-09-09T16:04:23-04:00</updated>
   <id>http://tadmacy.github.io/</id>
@@ -25,22 +25,17 @@
 </ol>
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='tcsh'><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; git add .
-</span><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; git commit -am <span class="s2">&quot;add posts&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="tcsh">[source]&gt; git add .
+[source]&gt; git commit -am "add posts"
+</code></pre>
 
 <ol>
 <li>Deploy changes to github (because &ldquo;rake deploy&rdquo; does not seem to do the job):</li>
 </ol>
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='tcsh'><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; rake gen_deploy
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="tcsh">[source]&gt; rake gen_deploy
+</code></pre>
 ]]></content>
   </entry>
   
@@ -85,26 +80,22 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;your-git-project-folder&gt;</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>cd &lt;your-git-project-folder&gt;
+</code></pre>
 
 <p>&mdash; Use git to clone the Octopress framework as the basis for your blog. Your blog &ldquo;repo&rdquo; begins its life as a clone of the [<a href="https://github.com/imathis/octopress">https://github.com/imathis/octopress</a>].</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/imathis/octopress.git &lt;your-blog-name&gt;</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>git clone git://github.com/imathis/octopress.git &lt;your-blog-name&gt;
+</code></pre>
 
 <ol>
 <li>Now we need to unpack the Octopress files:</li>
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd &lt;your-blog-name&gt;
-</span><span class='line'>bundle install</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>cd &lt;your-blog-name&gt;
+bundle install
+</code></pre>
 
 <p>   After some gems are checked or installed, the install process should end on success.</p>
 
@@ -113,9 +104,8 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake install</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>rake install
+</code></pre>
 
 <p>   This makes a few new folders. When it finishes, note that the command prompt changes. It now includes a change count indicator following &ldquo;master&rdquo;. The changes are in red because they have not been comitted yet.</p>
 
@@ -124,9 +114,8 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake setup_github_pages</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>rake setup_github_pages
+</code></pre>
 
 <p>   This command will ask you for the URL of the remote repository. Get the correct URL from the github page in of step 1. Your HTTP URL shown at the top of the page in the &ldquo;Quick setup&rdquo; block.</p>
 
@@ -140,17 +129,14 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !]&gt; cd .\_deploy
-</span><span class='line'>[master]&gt; git remote set-url origin https://github.com/tadmacy/tadmacy.github.io.git</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>[source +2 ~3 -0 !]&gt; cd .\_deploy
+[master]&gt; git remote set-url origin https://github.com/tadmacy/tadmacy.github.io.git
+</code></pre>
 
 <p>   You can use the git remote command to verify that origin is properly set:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[master]&gt; git remote -v</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>[master]&gt; git remote -v
+</code></pre>
 
 <p>   Don&rsquo;t forget to do a &ldquo;cd ..&rdquo; to get back the the &ldquo;source&rdquo; branch.</p>
 
@@ -163,31 +149,26 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !]&gt; rake generate
-</span><span class='line'>[source +2 ~3 -0 !]&gt; rake deploy</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>[source +2 ~3 -0 !]&gt; rake generate
+[source +2 ~3 -0 !]&gt; rake deploy
+</code></pre>
 
 <p>   Watch for errors. Hope you had none and are ready to move on!</p>
 
 <p>   By the way, there is a command that does these two things &ndash; or, at least, appears to!</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[source +2 ~3 -0 !] rake gen_deploy
-</span><span class='line'> ```
-</span><span class='line'>
-</span><span class='line'>7. But wait, there's more! You may have noticed that we did not commit the changes. Let's do that now. In "source":
-</span></code></pre></td></tr></table></div></figure>
+<pre><code>[source +2 ~3 -0 !] rake gen_deploy
+</code></pre>
+
+<ol>
+<li>But wait, there&rsquo;s more! You may have noticed that we did not commit the changes. Let&rsquo;s do that now. In &ldquo;source&rdquo;:</li>
+</ol>
 
 
-<p>[source +2 ~2 -0 !]> git add .
-[source +117 ~2 -0]> git commit -m &ldquo;first commit&rdquo;
-[source +117 ~2 -0]> rake gen_deploy
-&#8220;`</p>
+<pre><code>[source +2 ~2 -0 !]&gt; git add .
+[source +117 ~2 -0]&gt; git commit -m "first commit" 
+[source +117 ~2 -0]&gt; rake gen_deploy
+</code></pre>
 
 <ol>
 <li><p>Here&rsquo;s where I go back to github in my browser and look at the blog repository file list. You should see a lot files there now. And after a few minutes, your blog should be visible at &ldquo;<a href="http://">http://</a><your-blog-name>.github.io&rdquo;.</p></li>
@@ -207,9 +188,8 @@ We are finsihed here for now but don't close this page quite yet. While most of 
     <id>http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme</id>
     <content type="html"><![CDATA[<p>To add a theme to Jekyll GitHub blog, fire up your git shell and navigate to your local git repository for  your blog. Execute a command like the following (which installs the &ldquo;the minimum&rdquo;):</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake theme:install git="https://github.com/jekyllbootstrap/theme-the-minimum.git"</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>rake theme:install git="https://github.com/jekyllbootstrap/theme-the-minimum.git"
+</code></pre>
 
 <p>On completion, you have the option of switching to new theme.</p>
 
@@ -217,9 +197,8 @@ We are finsihed here for now but don't close this page quite yet. While most of 
 
 <p>To change to another existing theme:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake theme:switch name="the-program"</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>rake theme:switch name="the-program"
+</code></pre>
 
 <blockquote><p>Presumption is that you have already created your GitHub site and cloned it on ypur local device.</p></blockquote>
 ]]></content>
@@ -244,16 +223,11 @@ require 'rbconfig'
 
 <h3>With ticks (and Ruby keyword)</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='Ruby'><span class='line'><span class="nb">require</span> <span class="s1">&#39;rbconfig&#39;</span>
-</span><span class='line'> <span class="k">if</span> <span class="no">RbConfig</span><span class="o">::</span><span class="no">CONFIG</span><span class="o">[</span><span class="s1">&#39;target_os&#39;</span><span class="o">]</span> <span class="o">=~</span> <span class="sr">/mswin|mingw|cygwin/i</span>
-</span><span class='line'>   <span class="n">gem</span> <span class="s1">&#39;wdm&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 0.1.0&#39;</span>
-</span><span class='line'> <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="Ruby">require 'rbconfig'
+ if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+   gem 'wdm', '&gt;= 0.1.0'
+ end
+</code></pre>
 
 <h3>With PRE</h3>
 
@@ -266,14 +240,10 @@ Function thingy() {
 
 <h3>With ticks (and JavaScript keyword)</h3>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='JavaScript'><span class='line'><span class="nb">Function</span> <span class="nx">thingy</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;from thingy&quot;</span><span class="p">);</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<pre><code class="JavaScript">Function thingy() {
+    alert("from thingy");
+}
+</code></pre>
 
 <h3>Tip:</h3>
 
