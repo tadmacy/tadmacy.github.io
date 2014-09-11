@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T15:04:28-04:00</updated>
+  <updated>2014-09-11T15:07:17-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -128,11 +128,13 @@ bundle install
 </code></pre></li>
 <li><p>Here&rsquo;s where I go back to github in my browser and look at the blog repository file list. You should see a lot files there now. And after a few minutes, your blog should be visible at &ldquo;<a href="http://">http://</a><your-blog-name>.github.io&rdquo;.</p></li>
 <li><p>Lastly resume the instructions at Octopress. Be sure to apply the instructions in &ldquo;Don&rsquo;t forget to commit the source for your blog.&rdquo;</p></li>
-<li><p>Next steps:</p></li>
-<li>personalize your blog by editing the &ldquo;_config.yml&rdquo; file</li>
-<li>add posts to the &ldquo;source_posts&rdquo; folder, commit them, and run rake gen_deploy to push them to your new blog.</li>
 </ol>
 
+
+<p>   Oher next steps you&rsquo;ll find in the docs:</p>
+
+<p>   <em>personalize your blog by editing the &ldquo;_config.yml&rdquo; file
+   </em>add posts to the &ldquo;source_posts&rdquo; folder, commit them, and run rake gen_deploy to push them to your new blog.</p>
 ]]></content>
   </entry>
   
