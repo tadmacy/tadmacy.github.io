@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T13:40:46-04:00</updated>
+  <updated>2014-09-11T14:22:35-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Tad Macy]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -148,6 +148,15 @@ bundle install
 <li>add posts to the &ldquo;source_posts&rdquo; folder, commit them, and run rake gen_deploy to push them to your new blog.</li>
 </ol>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Edit Octpress GitHub Layout Aad CSS]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and%20CSS/"/>
+    <updated>2014-09-01T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and CSS</id>
+    <content type="html"><![CDATA[<p>If you generated your github blog as a clone of the Octopress blog, find the &ldquo;public&rdquo; folder in the root directory. That contains various templates and stylesheets. If you want to make a change edit those.</p>
 ]]></content>
   </entry>
   
