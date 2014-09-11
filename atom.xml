@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T15:16:37-04:00</updated>
+  <updated>2014-09-11T15:22:30-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -14,26 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to Edit Octpress GitHub Layout and CSS]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/"/>
-    <updated>2014-09-11T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css</id>
-    <content type="html"><![CDATA[<p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
-
-<ol>
-<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
-<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
-<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[How to Create an Octopress Github Blog]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/09/08/simple-setup-of-octopress-github-blog/"/>
-    <updated>2014-09-08T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/09/08/simple-setup-of-octopress-github-blog</id>
+    <link href="http://tadmacy.github.io/blog/2014/09/11/simple-setup-of-octopress-github-blog/"/>
+    <updated>2014-09-11T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/11/simple-setup-of-octopress-github-blog</id>
     <content type="html"><![CDATA[<p>I found the installation of a github blog with Octopress to be problematic. Seems like between the <a href="http://octopress.org/docs/deploying/github/">the Octopress site&rsquo;s docs</a> (which seem to be very thorough, BTW) and the <a href="https://pages.github.com/">github pages (a.k.a., blog)</a> creation docs, something was slipping between the cracks. Web searches resulted in many false leads or solutions inappropraite to my case. I got pretty frustrated. But, since it seems that others have had issues as well, I decided to knuckle down and find my own way. I put what I&rsquo;ve learned here.</p>
 
 <p>Also, this site can be helpful: <a href="http://eduncan911.com/software/octopress-powershell-and-posh-git-oh-my.html">Eric Duncan&rsquo;s blog</a>.</p>
@@ -135,6 +119,22 @@ bundle install
 
 <p>   <em>personalize your blog by editing the &ldquo;_config.yml&rdquo; file
    </em>add posts to the &ldquo;source_posts&rdquo; folder, commit them, and run rake gen_deploy to push them to your new blog.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Edit Octpress GitHub Layout and CSS]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/"/>
+    <updated>2014-09-11T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css</id>
+    <content type="html"><![CDATA[<p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
+
+<ol>
+<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
+<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
+<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
+</ol>
+
 ]]></content>
   </entry>
   
