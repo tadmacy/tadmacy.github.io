@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T15:22:30-04:00</updated>
+  <updated>2014-09-11T15:25:44-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -37,7 +37,7 @@
 
 <p>After clicking &ldquo;Create&rdquo;, you&rsquo;ll see a screen like this one.</p>
 
-<p><img src="../images/snaps/github-repo-create..png" title="Repo setup page" alt="alt text" /></p>
+<p><img src="https://tadmacy.github.io/images/snaps/github-repo-create..png" title="Repo setup page" alt="alt text" /></p>
 
 <p>Make sure that the blog is empty, i.e., no README.md. Don&rsquo;t clone it or pull it to your local host.</p>
 
