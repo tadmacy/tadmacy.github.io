@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T14:43:34-04:00</updated>
+  <updated>2014-09-11T15:02:55-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -14,41 +14,26 @@
 
   
   <entry>
-    <title type="html"><![CDATA[How to Commit Octopress Posts]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/"/>
-    <updated>2014-09-08T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts</id>
-    <content type="html"><![CDATA[<p>After creating a new post, three commands are run to update the blog on github.</p>
+    <title type="html"><![CDATA[How to Edit Octpress GitHub Layout Aad CSS]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/"/>
+    <updated>2014-09-11T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css</id>
+    <content type="html"><![CDATA[<p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
 
 <ol>
-<li>Navigate to the source folder of your repository. In my Windows 7 host it is &ldquo;Documents\GitHub\tadmacy.github.io [source]&rdquo;. I use the posh-git shell.</li>
+<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
+<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
+<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
 </ol>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='tcsh'><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; git add .
-</span><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; git commit -am <span class="s2">&quot;add posts&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>Deploy changes to github (because &ldquo;rake deploy&rdquo; does not seem to do the job):</li>
-</ol>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='tcsh'><span class='line'><span class="o">[</span><span class="nb">source</span><span class="o">]</span>&gt; rake gen_deploy
-</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Create an Octopress Github Blog]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/09/08/Simple-setup-of-octopress-github-blog/"/>
+    <link href="http://tadmacy.github.io/blog/2014/09/08/simple-setup-of-octopress-github-blog/"/>
     <updated>2014-09-08T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/09/08/Simple-setup-of-octopress-github-blog</id>
+    <id>http://tadmacy.github.io/blog/2014/09/08/simple-setup-of-octopress-github-blog</id>
     <content type="html"><![CDATA[<p>I found the installation of a github blog with Octopress to be problematic. Seems like between the <a href="http://octopress.org/docs/deploying/github/">the Octopress site&rsquo;s docs</a> (which seem to be very thorough, BTW) and the <a href="https://pages.github.com/">github pages (a.k.a., blog)</a> creation docs, something was slipping between the cracks. Web searches resulted in many false leads or solutions inappropraite to my case. I got pretty frustrated. But, since it seems that others have had issues as well, I decided to knuckle down and find my own way. I put what I&rsquo;ve learned here.</p>
 
 <p>Also, this site can be helpful: <a href="http://eduncan911.com/software/octopress-powershell-and-posh-git-oh-my.html">Eric Duncan&rsquo;s blog</a>.</p>
@@ -152,16 +137,31 @@ bundle install
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Edit Octpress GitHub Layout Aad CSS]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and%20CSS/"/>
-    <updated>2014-09-01T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and CSS</id>
-    <content type="html"><![CDATA[<p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
+    <title type="html"><![CDATA[How to Commit Octopress Posts]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/"/>
+    <updated>2014-09-08T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts</id>
+    <content type="html"><![CDATA[<p>After creating a new post, three commands are run to update the blog on github.</p>
 
 <ol>
-<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
-<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
-<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
+<li><p>Navigate to the source folder of your repository. In my Windows 7 host it is &ldquo;Documents\GitHub\tadmacy.github.io [source]&rdquo;. I use the posh-git shell.</p>
+
+<p>If you&rsquo;ve added or renamed files:</p>
+
+<pre><code class="tcsh">[source]&gt; git add .
+[source]&gt; git commit -a -m "add post"
+</code></pre>
+
+<p>-or-</p>
+
+<p>If you only edited existing files:</p>
+
+<pre><code>[source]&gt; git commit -a -m "add posts"
+</code></pre></li>
+<li><p>Deploy changes to github (because &ldquo;rake deploy&rdquo; does not seem to do the job):</p>
+
+<pre><code class="tcsh">[source]&gt; rake gen_deploy
+</code></pre></li>
 </ol>
 
 ]]></content>
@@ -172,31 +172,31 @@ bundle install
     <link href="http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme/"/>
     <updated>2014-08-06T00:00:00-04:00</updated>
     <id>http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme</id>
-    <content type="html"><![CDATA[<p>To add a theme to Jekyll GitHub blog, fire up your git shell and navigate to your local git repository for  your blog. Execute a command like the following (which installs the &ldquo;the minimum&rdquo;):</p>
+    <content type="html"><![CDATA[<p>To add a theme to a Jekyll GitHub blog, fire up your git shell and navigate to your local git repository of your blog. Execute a command similar to following (which installs the &ldquo;the minimum&rdquo;) using the name of the theme-you-want.git:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake theme:install git="https://github.com/jekyllbootstrap/theme-the-minimum.git"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>On completion, you have the option of switching to new theme.</p>
-
-<p>Push your changes (i.e., commit) the changes and in a few minutes, your GitHub site should be using the new theme.</p>
-
-<p>To change to another existing theme:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake theme:switch name="the-program"</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='tcsh'><span class='line'>rake theme:install <span class="nv">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/jekyllbootstrap/theme-the-minimum.git&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-<blockquote><p>Presumption is that you have already created your GitHub site and cloned it on ypur local device.</p></blockquote>
+<p>On completion, you have the option of switching to new theme or staying with your old one.</p>
+
+<p>Push your changes (i.e., commit, generate, deploy, push) the changes. Wait a few minutes and your GitHub blog should be using the new theme.</p>
+
+<p>To switch to a theme previously installed:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='tcsh'><span class='line'>rake theme:switch <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;the-program&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Put Code in Markdown]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/08/05/how-to-check-list/"/>
+    <link href="http://tadmacy.github.io/blog/2014/08/05/how-to-display-code-blocks-in-markdown/"/>
     <updated>2014-08-05T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/08/05/how-to-check-list</id>
+    <id>http://tadmacy.github.io/blog/2014/08/05/how-to-display-code-blocks-in-markdown</id>
     <content type="html"><![CDATA[<h2>Ticks better than PRE tag</h2>
 
 <h3>With PRE</h3>

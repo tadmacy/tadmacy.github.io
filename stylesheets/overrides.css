@@ -1,8 +1,7 @@
-/* My CSS overrides of screen.css */
+/*
+ * My CSS overrides of screen.css. Edit the "source" copy and
+ * commit, generate, deploy.
+ */
 p code, li code {
     color: #93A1A1;
-}
-
-.myThing {
-	color: red;
 }

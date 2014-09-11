@@ -3,25 +3,25 @@
   
   
   <url>
+    <loc>http://tadmacy.github.io/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/</loc>
+    
+    <lastmod>2014-09-11T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://tadmacy.github.io/blog/2014/09/08/simple-setup-of-octopress-github-blog/</loc>
+    
+    <lastmod>2014-09-08T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/</loc>
     
     <lastmod>2014-09-08T00:00:00-04:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://tadmacy.github.io/blog/2014/09/08/Simple-setup-of-octopress-github-blog/</loc>
-    
-    <lastmod>2014-09-08T00:00:00-04:00</lastmod>
-    
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and%20CSS/</loc>
-    
-    <lastmod>2014-09-01T00:00:00-04:00</lastmod>
     
     <priority>0.8</priority>
   </url>
@@ -35,7 +35,7 @@
   </url>
   
   <url>
-    <loc>http://tadmacy.github.io/blog/2014/08/05/how-to-check-list/</loc>
+    <loc>http://tadmacy.github.io/blog/2014/08/05/how-to-display-code-blocks-in-markdown/</loc>
     
     <lastmod>2014-08-05T00:00:00-04:00</lastmod>
     
@@ -45,14 +45,14 @@
   
   <url>
     <loc>http://tadmacy.github.io/blog/archives/</loc>
-    <lastmod>2014-09-11T14:43:34-04:00</lastmod>
+    <lastmod>2014-09-11T15:02:55-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://tadmacy.github.io/</loc>
-    <lastmod>2014-09-11T14:43:34-04:00</lastmod>
+    <lastmod>2014-09-11T15:02:55-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
