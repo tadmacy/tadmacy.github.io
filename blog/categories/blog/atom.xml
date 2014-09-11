@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Tad Macy]]></title>
   <link href="http://tadmacy.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-11T14:31:39-04:00</updated>
+  <updated>2014-09-11T14:43:34-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -151,7 +151,14 @@ bundle install
     <link href="http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and%20CSS/"/>
     <updated>2014-09-01T00:00:00-04:00</updated>
     <id>http://tadmacy.github.io/blog/2014/09/01/How-to-modify-octopress-githhub-layout-and CSS</id>
-    <content type="html"><![CDATA[<p>If you generated your github blog as a clone of the Octopress blog, find the &ldquo;public&rdquo; folder in the root directory. That contains various templates and stylesheets. If you want to make a change edit those.</p>
+    <content type="html"><![CDATA[<p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
+
+<ol>
+<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
+<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
+<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
+</ol>
+
 ]]></content>
   </entry>
   

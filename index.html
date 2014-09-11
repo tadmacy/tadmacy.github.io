@@ -22,6 +22,7 @@
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/overrides.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/dummy.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Tad Macy" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -266,7 +267,14 @@ bundle install
   </header>
 
 
-  <div class="entry-content"><p>If you generated your github blog as a clone of the Octopress blog, find the &ldquo;public&rdquo; folder in the root directory. That contains various templates and stylesheets. If you want to make a change edit those.</p>
+  <div class="entry-content"><p>In my github blog which was generated from a clone of the Octopress blog, I did this to change some CSS.</p>
+
+<ol>
+<li><p>In the &ldquo;source/stylesheets&rdquo; folder in the root of the repository, I added the file &ldquo;overrides.css&rdquo;.</p></li>
+<li><p>To modify the HTML header to include the new CSS file, I edited the &ldquo;source/head.html&rdquo; to include the new link.</p></li>
+<li><p>Do a &ldquo;commit -a -m &lsquo;my new css&rsquo;&rdquo; followed by &ldquo;rake gen_deploy&rdquo;</p></li>
+</ol>
+
 </div>
   
   
