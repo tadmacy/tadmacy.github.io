@@ -27,6 +27,22 @@
   </url>
   
   <url>
+    <loc>http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/</loc>
+    
+    <lastmod>2014-09-02T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/</loc>
+    
+    <lastmod>2014-08-31T00:00:00-04:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme/</loc>
     
     <lastmod>2014-08-06T00:00:00-04:00</lastmod>
@@ -45,21 +61,21 @@
   
   <url>
     <loc>http://tadmacy.github.io/blog/archives/</loc>
-    <lastmod>2014-09-12T15:33:18-04:00</lastmod>
+    <lastmod>2014-09-16T17:02:49-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://tadmacy.github.io/</loc>
-    <lastmod>2014-09-12T15:33:18-04:00</lastmod>
+    <lastmod>2014-09-16T17:02:49-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://tadmacy.github.io/about/</loc>
-    <lastmod>2014-09-12T15:33:18-04:00</lastmod>
+    <lastmod>2014-09-16T17:02:49-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

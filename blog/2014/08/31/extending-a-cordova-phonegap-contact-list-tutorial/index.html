@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Commit Octopress Posts - Tad Macy</title>
+  <title>Extending a Cordova/Phonegap Contact List Tutorial - Tad Macy</title>
   <meta name="author" content="Tad Macy">
 
   
-  <meta name="description" content="After creating a new post, three commands are run to update the blog on github. Navigate to the source folder of your repository. In my Windows 7 &hellip;">
+  <meta name="description" content="The completion of the tutorial intended to accompany this post has been delayed. Please check back soon or drop me a note if you have questions or a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts">
+  <link rel="canonical" href="http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/overrides.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">How to Commit Octopress Posts</h1>
+      <h1 class="entry-title">Extending a Cordova/Phonegap Contact List Tutorial</h1>
     
     
       <p class="meta">
@@ -80,7 +80,7 @@
 
 
 
-<time class='entry-date' datetime='2014-09-08T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-08-31T00:00:00-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://tadmacy.github.io">Comments</a>
@@ -90,29 +90,25 @@
   </header>
 
 
-<div class="entry-content"><p>After creating a new post, three commands are run to update the blog on github.</p>
+<div class="entry-content"><blockquote>The completion of the tutorial intended to accompany this post has been delayed. Please check back soon or drop me a note if you have questions or a particular interest in this work.</blockquote>
 
-<ol>
-<li><p>Navigate to the source folder of your repository. In my Windows 7 host it is &ldquo;Documents\GitHub\tadmacy.github.io [source]&rdquo;. I use the posh-git shell.</p>
 
-<p>If you&rsquo;ve added or renamed files:</p>
+<p>I was anxious to learn some new frameworks, build a mobile app using a cross platform tool or SDK, and apply this effort to produce something useful. As it happened our department needed a better way to distribute our internal emergency contact information. This seemed to be a great fit for a side project &ndash; a mobile app that worked like the native contact list in the iPhone.</p>
 
-<pre><code class="tcsh">[source]&gt; git add .
-[source]&gt; git commit -a -m "add post"
-</code></pre>
+<p>But a few requirements quickly emerged. Most of our staff carry iPhones, but a few have Android devices. It would be a big win if the app ran on both the iOS and Android platforms. At first this seemed like a show stopper considering the limited time available for a side project. Yes, I&rsquo;ve done a bit of iOS work; a bit of Java &ndash; but no Android development at all.</p>
 
-<p>-or-</p>
+<p>A while back I had read about several cross device SDK&rsquo;s and experimented with Intel&rsquo;s XDK. Most of the cross device SDKs use tools familiar to front-end developers: HTML5, CSS and JavaScript/jQuery. It would be a real advantage to leverage my skills in that area. I liked XDK when I tried it. It looks like its been improved, too.</p>
 
-<p>If you only edited existing files:</p>
+<p>I&rsquo;d also heard some good things about PhoneGap. A few Google searches, a little reading and I hit upon  Cordova (aka PhoneGap) 3.x Tutorial by Christophe Coenraets. Perfect! Using some new tools like Nodejs/npm, Handlebars framework and TopCoat CSS? Great. I decided to get going and try PhoneGap. The tutorial was great. Got the app up in running quite quickly.</p>
 
-<pre><code>[source]&gt; git commit -a -m "add posts"
-</code></pre></li>
-<li><p>Deploy changes to github (because &ldquo;rake deploy&rdquo; does not seem to do the job):</p>
+<p>But, hold on a second.</p>
 
-<pre><code class="tcsh">[source]&gt; rake gen_deploy
-</code></pre></li>
-</ol>
+<p>My app was to contain personal data - real data. I&rsquo;d have to authenticate to our central LDAP/AD authentication services. Also, this contact list would require data not stored in the mainstream institutional user repositories so a well supported secure database would be needed, too. This little side project was quickly blossoming into something much bigger. But being the Drupal guy here, too, I&rsquo;d built an institutional news service in Drupal with authentication to AD. It occurred to me that I could build a small module for this application to extend the Drupal user data to include some additional fields. And, since Drupal has optional RESTful services, my backend issues were starting to fall into place.</p>
 
+<p>Luckily, I underestimated the time needed to pull all of this off and charged ahead.</p>
+
+<p>So, my tutorial, Extending the Cordova/Phonegap Contact List, builds upon the terrific Cordova (aka PhoneGap) 3.x Tutorial by Christophe Coenraets.
+Note that Christophe updated his tutorial in early July of 2014 and it has some significant changes here. My tutorial is based on the pre-July version.</p>
 </div>
 
 
@@ -128,7 +124,7 @@
 
 
 
-<time class='entry-date' datetime='2014-09-08T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-08-31T00:00:00-04:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
       
 
 <span class="categories">
@@ -142,7 +138,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/" data-via="tadmacy" data-counturl="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/" data-via="tadmacy" data-counturl="http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/" >Tweet</a>
   
   
   
@@ -151,10 +147,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/" title="Previous Post: How to create an Octopress github blog">&laquo; How to create an Octopress github blog</a>
+        <a class="basic-alignment left" href="/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme/" title="Previous Post: How to Change Your Jekyll GitHub Blog Theme">&laquo; How to Change Your Jekyll GitHub Blog Theme</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/" title="Next Post: How to edit Octpress GitHub layout and CSS">How to edit Octpress GitHub layout and CSS &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/" title="Next Post: How to create an Octopress github blog">How to create an Octopress github blog &raquo;</a>
       
     </p>
   </footer>

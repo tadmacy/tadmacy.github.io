@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Tad Macy]]></title>
   <link href="http://tadmacy.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-12T15:33:18-04:00</updated>
+  <updated>2014-09-16T17:02:49-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -173,70 +173,40 @@ bundle install
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Change Your Jekyll GitHub Blog Theme]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme/"/>
-    <updated>2014-08-06T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme</id>
-    <content type="html"><![CDATA[<p>To add a theme to a Jekyll GitHub blog, fire up your git shell and navigate to your local git repository of your blog. Execute a command similar to following (which installs the &ldquo;the minimum&rdquo;) using the name of the theme-you-want.git:</p>
+    <title type="html"><![CDATA[How to Create an Octopress Github Blog]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/"/>
+    <updated>2014-09-02T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows</id>
+    <content type="html"><![CDATA[<p>Trying to keep up with new software releases can be tough. I&rsquo;ve had the case where I need multiple versions of Ruby installed to satisfy the requirements of some tools or gems. I found <a href="http://stackoverflow.com/questions/3648744/how-to-have-multiple-versions-of-ruby-and-rails-and-their-combinations-on-windo">this article at StackOverflow</a> that helped me. Locate the post by Harish Shetty and everything you need is there. In summary, the best option for me was the installation of the &ldquo;pik&rdquo; gem.</p>
 
-<pre><code class="tcsh">rake theme:install git="https://github.com/jekyllbootstrap/theme-the-minimum.git"
-</code></pre>
-
-<p>On completion, you have the option of switching to new theme or staying with your old one.</p>
-
-<p>Push your changes (i.e., commit, generate, deploy, push) the changes. Wait a few minutes and your GitHub blog should be using the new theme.</p>
-
-<p>To switch to a theme previously installed:</p>
-
-<pre><code class="tcsh">rake theme:switch name="the-program"
-</code></pre>
+<p>Despite the claim by some that this project is out of date, I have yet to find a better option. And, the assertion by some that it not needed is false. I need it.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Display Code Blocks in Markdown]]></title>
-    <link href="http://tadmacy.github.io/blog/2014/08/05/how-to-display-code-blocks-in-markdown/"/>
-    <updated>2014-08-05T00:00:00-04:00</updated>
-    <id>http://tadmacy.github.io/blog/2014/08/05/how-to-display-code-blocks-in-markdown</id>
-    <content type="html"><![CDATA[<h2>Ticks better than PRE tag</h2>
-
-<h3>With PRE</h3>
-
-<pre>
-require 'rbconfig'
- if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
-   gem 'wdm', '>= 0.1.0'
- end
-</pre>
+    <title type="html"><![CDATA[Extending a Cordova/Phonegap Contact List Tutorial]]></title>
+    <link href="http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/"/>
+    <updated>2014-08-31T00:00:00-04:00</updated>
+    <id>http://tadmacy.github.io/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial</id>
+    <content type="html"><![CDATA[<blockquote>The completion of the tutorial intended to accompany this post has been delayed. Please check back soon or drop me a note if you have questions or a particular interest in this work.</blockquote>
 
 
-<h3>With ticks (and Ruby keyword)</h3>
+<p>I was anxious to learn some new frameworks, build a mobile app using a cross platform tool or SDK, and apply this effort to produce something useful. As it happened our department needed a better way to distribute our internal emergency contact information. This seemed to be a great fit for a side project &ndash; a mobile app that worked like the native contact list in the iPhone.</p>
 
-<pre><code class="Ruby">require 'rbconfig'
- if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
-   gem 'wdm', '&gt;= 0.1.0'
- end
-</code></pre>
+<p>But a few requirements quickly emerged. Most of our staff carry iPhones, but a few have Android devices. It would be a big win if the app ran on both the iOS and Android platforms. At first this seemed like a show stopper considering the limited time available for a side project. Yes, I&rsquo;ve done a bit of iOS work; a bit of Java &ndash; but no Android development at all.</p>
 
-<h3>With PRE</h3>
+<p>A while back I had read about several cross device SDK&rsquo;s and experimented with Intel&rsquo;s XDK. Most of the cross device SDKs use tools familiar to front-end developers: HTML5, CSS and JavaScript/jQuery. It would be a real advantage to leverage my skills in that area. I liked XDK when I tried it. It looks like its been improved, too.</p>
 
-<pre>
-Function thingy() {
-    alert("from thingy");
-}
-</pre>
+<p>I&rsquo;d also heard some good things about PhoneGap. A few Google searches, a little reading and I hit upon  Cordova (aka PhoneGap) 3.x Tutorial by Christophe Coenraets. Perfect! Using some new tools like Nodejs/npm, Handlebars framework and TopCoat CSS? Great. I decided to get going and try PhoneGap. The tutorial was great. Got the app up in running quite quickly.</p>
 
+<p>But, hold on a second.</p>
 
-<h3>With ticks (and JavaScript keyword)</h3>
+<p>My app was to contain personal data - real data. I&rsquo;d have to authenticate to our central LDAP/AD authentication services. Also, this contact list would require data not stored in the mainstream institutional user repositories so a well supported secure database would be needed, too. This little side project was quickly blossoming into something much bigger. But being the Drupal guy here, too, I&rsquo;d built an institutional news service in Drupal with authentication to AD. It occurred to me that I could build a small module for this application to extend the Drupal user data to include some additional fields. And, since Drupal has optional RESTful services, my backend issues were starting to fall into place.</p>
 
-<pre><code class="JavaScript">Function thingy() {
-    alert("from thingy");
-}
-</code></pre>
+<p>Luckily, I underestimated the time needed to pull all of this off and charged ahead.</p>
 
-<h3>Tip:</h3>
-
-<p>Use jekyll build -watch  (and not -w before start) to have pages watch so you don&rsquo;t have to stop and restart local server.</p>
+<p>So, my tutorial, Extending the Cordova/Phonegap Contact List, builds upon the terrific Cordova (aka PhoneGap) 3.x Tutorial by Christophe Coenraets.
+Note that Christophe updated his tutorial in early July of 2014 and it has some significant changes here. My tutorial is based on the pre-July version.</p>
 ]]></content>
   </entry>
   

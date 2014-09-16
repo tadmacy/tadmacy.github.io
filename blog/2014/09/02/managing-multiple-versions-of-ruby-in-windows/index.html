@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>How to Commit Octopress Posts - Tad Macy</title>
+  <title>How to Create an Octopress Github Blog - Tad Macy</title>
   <meta name="author" content="Tad Macy">
 
   
-  <meta name="description" content="After creating a new post, three commands are run to update the blog on github. Navigate to the source folder of your repository. In my Windows 7 &hellip;">
+  <meta name="description" content="Trying to keep up with new software releases can be tough. I&rsquo;ve had the case where I need multiple versions of Ruby installed to satisfy the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts">
+  <link rel="canonical" href="http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/overrides.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">How to Commit Octopress Posts</h1>
+      <h1 class="entry-title">How to Create an Octopress Github Blog</h1>
     
     
       <p class="meta">
@@ -80,7 +80,7 @@
 
 
 
-<time class='entry-date' datetime='2014-09-08T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-09-02T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://tadmacy.github.io">Comments</a>
@@ -90,29 +90,9 @@
   </header>
 
 
-<div class="entry-content"><p>After creating a new post, three commands are run to update the blog on github.</p>
+<div class="entry-content"><p>Trying to keep up with new software releases can be tough. I&rsquo;ve had the case where I need multiple versions of Ruby installed to satisfy the requirements of some tools or gems. I found <a href="http://stackoverflow.com/questions/3648744/how-to-have-multiple-versions-of-ruby-and-rails-and-their-combinations-on-windo">this article at StackOverflow</a> that helped me. Locate the post by Harish Shetty and everything you need is there. In summary, the best option for me was the installation of the &ldquo;pik&rdquo; gem.</p>
 
-<ol>
-<li><p>Navigate to the source folder of your repository. In my Windows 7 host it is &ldquo;Documents\GitHub\tadmacy.github.io [source]&rdquo;. I use the posh-git shell.</p>
-
-<p>If you&rsquo;ve added or renamed files:</p>
-
-<pre><code class="tcsh">[source]&gt; git add .
-[source]&gt; git commit -a -m "add post"
-</code></pre>
-
-<p>-or-</p>
-
-<p>If you only edited existing files:</p>
-
-<pre><code>[source]&gt; git commit -a -m "add posts"
-</code></pre></li>
-<li><p>Deploy changes to github (because &ldquo;rake deploy&rdquo; does not seem to do the job):</p>
-
-<pre><code class="tcsh">[source]&gt; rake gen_deploy
-</code></pre></li>
-</ol>
-
+<p>Despite the claim by some that this project is out of date, I have yet to find a better option. And, the assertion by some that it not needed is false. I need it.</p>
 </div>
 
 
@@ -128,7 +108,7 @@
 
 
 
-<time class='entry-date' datetime='2014-09-08T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>8</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
+<time class='entry-date' datetime='2014-09-02T00:00:00-04:00'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>2</span><span class='date-suffix'>nd</span>, <span class='date-year'>2014</span></span> <span class='time'>12:00 am</span></time>
       
 
 <span class="categories">
@@ -142,7 +122,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/" data-via="tadmacy" data-counturl="http://tadmacy.github.io/blog/2014/09/08/how-to-commit-octopress-posts/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/" data-via="tadmacy" data-counturl="http://tadmacy.github.io/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/" >Tweet</a>
   
   
   
@@ -151,10 +131,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/" title="Previous Post: How to create an Octopress github blog">&laquo; How to create an Octopress github blog</a>
+        <a class="basic-alignment left" href="/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/" title="Previous Post: Extending a Cordova/Phonegap Contact List Tutorial">&laquo; Extending a Cordova/Phonegap Contact List Tutorial</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/" title="Next Post: How to edit Octpress GitHub layout and CSS">How to edit Octpress GitHub layout and CSS &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/09/08/how-to-commit-octopress-posts/" title="Next Post: How to commit Octopress posts">How to commit Octopress posts &raquo;</a>
       
     </p>
   </footer>
