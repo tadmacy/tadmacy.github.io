@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Tad Macy</title>
+  <title>Getting the RESTful Java Example With Jersey to Run - Tad Macy</title>
   <meta name="author" content="Tad Macy">
 
   
-  <meta name="description" content="Blog Archive 2014 How to Create an Octopress Github Blog
-Sep 11 2014 posted in blog How to Edit Octpress GitHub Layout and CSS
-Sep 11 2014 posted in &hellip;">
+  <meta name="description" content="There was an issue trying to run the Jersey REST examples. In Eclipse Juno, the project named &ldquo;de.vogella.jersey.first&rdquo; is the server and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ Sep 11 2014 posted in &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tadmacy.github.io/blog/archives">
+  <link rel="canonical" href="http://tadmacy.github.io/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/overrides.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -69,136 +67,92 @@ Sep 11 2014 posted in &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Getting the RESTful Java Example With Jersey to Run</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-02-20T00:00:00-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://tadmacy.github.io">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>There was an issue trying to run the Jersey REST examples. In Eclipse Juno, the project named &ldquo;de.vogella.jersey.first&rdquo; is the server and the project named &ldquo;de.vogella.jersey.first.client&rdquo; is the client.  In Eclipse, open these two projects. (Note: The Servers project is usually always open but if it isn&rsquo;t, Tomcat will not be available.)</p>
 
-  
-  <h2>2014</h2>
+<p>Right click on the project name to locate the &ldquo;Run as&rdquo; menu and choose &ldquo;Run on server&rdquo; project on the Tomcat v7 server.  In the console the final message in red should be &ldquo;INFO: Server startup in 1969 ms&rdquo;.  Note that Eclipse will open a browser window that will correctly report a 404 error.  And, of course there should be no other errors.</p>
 
-<article>
-  
-<h1><a href="/blog/2014/09/11/simple-setup-of-octopress-github-blog/">How to Create an Octopress Github Blog</a></h1>
-<time datetime="2014-09-11T00:00:00-04:00" pubdate><span class='month'>Sep</span> <span class='day'>11</span> <span class='year'>2014</span></time>
+<p>Right click on the cleint project run as a Java application.  This will raise a popup which requires no changes so click &ldquo;OK&rdquo;.  The app should run and show the output in the console window like so:</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/09/11/how-to-modify-octopress-githhub-layout-and-css/">How to Edit Octpress GitHub Layout and CSS</a></h1>
-<time datetime="2014-09-11T00:00:00-04:00" pubdate><span class='month'>Sep</span> <span class='day'>11</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>GET http://localhost/de.vogella.jersey.first/rest/hello returned a response status of 200 OK
+</span><span class='line'>Hello Jersey
+</span><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span><span class="nt">&lt;hello&gt;</span> Hello Jersey<span class="nt">&lt;/hello&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span> <span class="nt">&lt;title&gt;</span>Hello Jersey<span class="nt">&lt;/title&gt;&lt;body&gt;&lt;h1&gt;</span>Hello Jersey<span class="nt">&lt;/body&gt;&lt;/h1&gt;&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
-</article>
+<p>The correct URL to access the service is:</p>
 
-
-
-<article>
-  
-<h1><a href="/blog/2014/09/08/how-to-commit-octopress-posts/">How to Commit Octopress Posts</a></h1>
-<time datetime="2014-09-08T00:00:00-04:00" pubdate><span class='month'>Sep</span> <span class='day'>08</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/">How to Create an Octopress Github Blog</a></h1>
-<time datetime="2014-09-02T00:00:00-04:00" pubdate><span class='month'>Sep</span> <span class='day'>02</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/">Extending a Cordova/Phonegap Contact List Tutorial</a></h1>
-<time datetime="2014-08-31T00:00:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>31</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/08/06/how-to-change-your-jekyll-github-blog-theme/">How to Change Your Jekyll GitHub Blog Theme</a></h1>
-<time datetime="2014-08-06T00:00:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>06</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2014/08/05/how-to-display-code-blocks-in-markdown/">How to Display Code Blocks in Markdown</a></h1>
-<time datetime="2014-08-05T00:00:00-04:00" pubdate><span class='month'>Aug</span> <span class='day'>05</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
-
-
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run/">Getting the RESTful Java Example With Jersey to Run</a></h1>
-<time datetime="2013-02-20T00:00:00-05:00" pubdate><span class='month'>Feb</span> <span class='day'>20</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
-
-
-</article>
-
+<p><a href="http://localhost/de.vogella.jersey.first/rest/hello">http://localhost/de.vogella.jersey.first/rest/hello</a></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Tad Macy</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-02-20T00:00:00-05:00'><span class='date'><span class='date-month'>Feb</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/blog/'>blog</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://tadmacy.github.io/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run/" data-via="tadmacy" data-counturl="http://tadmacy.github.io/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/08/05/how-to-display-code-blocks-in-markdown/" title="Next Post: How to display code blocks in markdown">How to display code blocks in markdown &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>

@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2014-09-16T17:02:49-04:00</updated>
+  <updated>2014-09-16T17:14:17-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -288,6 +288,34 @@ Function thingy() {
 <h3>Tip:</h3>
 
 <p>Use jekyll build -watch  (and not -w before start) to have pages watch so you don&rsquo;t have to stop and restart local server.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Getting the RESTful Java Example With Jersey to Run]]></title>
+    <link href="http://tadmacy.github.io/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run/"/>
+    <updated>2013-02-20T00:00:00-05:00</updated>
+    <id>http://tadmacy.github.io/blog/2013/02/20/getting-the-restful-java-example-with-jersey-to-run</id>
+    <content type="html"><![CDATA[<p>There was an issue trying to run the Jersey REST examples. In Eclipse Juno, the project named &ldquo;de.vogella.jersey.first&rdquo; is the server and the project named &ldquo;de.vogella.jersey.first.client&rdquo; is the client.  In Eclipse, open these two projects. (Note: The Servers project is usually always open but if it isn&rsquo;t, Tomcat will not be available.)</p>
+
+<p>Right click on the project name to locate the &ldquo;Run as&rdquo; menu and choose &ldquo;Run on server&rdquo; project on the Tomcat v7 server.  In the console the final message in red should be &ldquo;INFO: Server startup in 1969 ms&rdquo;.  Note that Eclipse will open a browser window that will correctly report a 404 error.  And, of course there should be no other errors.</p>
+
+<p>Right click on the cleint project run as a Java application.  This will raise a popup which requires no changes so click &ldquo;OK&rdquo;.  The app should run and show the output in the console window like so:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'>GET http://localhost/de.vogella.jersey.first/rest/hello returned a response status of 200 OK
+</span><span class='line'>Hello Jersey
+</span><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span><span class="nt">&lt;hello&gt;</span> Hello Jersey<span class="nt">&lt;/hello&gt;</span>
+</span><span class='line'><span class="nt">&lt;html&gt;</span> <span class="nt">&lt;title&gt;</span>Hello Jersey<span class="nt">&lt;/title&gt;&lt;body&gt;&lt;h1&gt;</span>Hello Jersey<span class="nt">&lt;/body&gt;&lt;/h1&gt;&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The correct URL to access the service is:</p>
+
+<p><a href="http://localhost/de.vogella.jersey.first/rest/hello">http://localhost/de.vogella.jersey.first/rest/hello</a></p>
 ]]></content>
   </entry>
   
