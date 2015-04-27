@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2015-04-27T09:29:57-04:00</updated>
+  <updated>2015-04-27T11:45:22-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -18,7 +18,7 @@
     <link href="http://tadmacy.github.io/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/"/>
     <updated>2015-04-24T00:00:00-04:00</updated>
     <id>http://tadmacy.github.io/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage</id>
-    <content type="html"><![CDATA[<p>Many sites explain how to move Thunderbird mail environments easily from a PC (Win7) to a Mac (Yosemite). But, none that I attempted worked for me. That&rsquo;s probably because of my particular use of Thunderbird on this PC.</p>
+    <content type="html"><![CDATA[<p>Many sites explain how to move Thunderbird mail environments easily from a PC (Win7) to a Mac (Yosemite). But, none that I attempted worked for me. That&rsquo;s probably because of my particular use of Thunderbird on this PC that mixes local and remore storage.</p>
 
 <p>I use Thunderbird for remote server accounts (IMAP) AND I use &ldquo;Local Folders&rdquo; to save/archive old mail and my messages from RSS feeds are stored in the &ldquo;News &amp; Blogs&rdquo; area. WHen I tried the solutions I got some of my mail and/or settings but not all and my &ldquo;Local Folders&rdquo; mail was missing. Since I use that to archive more precious things, that was a real issue.</p>
 
@@ -26,23 +26,97 @@
 
 <p>One profile was here on my PC:</p>
 
-<pre><code>%HOMEPATH%\AppData\Local\Thunderbird\Profiles\zwfok92z.default
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>%HOMEPATH%\AppData\Local\Thunderbird\Profiles\zwfok92z.default</span></code></pre></td></tr></table></div></figure>
+
 
 <p>This profile held most of the settings for folders and so on but none of the locally stored mail.</p>
 
 <p>The other was here.</p>
 
-<pre><code>%HOMEPATH%\AppData\Roaming\Thunderbird\Profiles\zwfok92z.default
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>%HOMEPATH%\AppData\Roaming\Thunderbird\Profiles\zwfok92z.default</span></code></pre></td></tr></table></div></figure>
+
 
 <p>Note they both had the same name and I verified that the dates on files in both locations were refreshed as I used Thunderbird.</p>
 
-<p>Following the general instructions for moving the profile, I moved the &ldquo;Roaming&rdquo; profile first. THen I copied the &ldquo;Local&rdquo; profile over it. That merged the two.</p>
+<h2>Steps:</h2>
 
-<p>All my settings and local mail reappeared.</p>
+<ol>
+<li>Create zip or tar files on the profiles you want to move</li>
+</ol>
 
-<p>Background on the use &ldquo;Local Folders&rdquo;: I copy folders or individual messages from the server account to the &ldquo;Local Folders&rdquo; area. After the messages are moved to the local store, I delete them from the server which a) reduces storage needs in the server; b) preserves some mail for as long as I need it; and c) seems to speed up Thunderbird. Since this is an archival step, I am willing to sacrifice the ability to read them remotely.</p>
+
+<p>Locate the storage folders on your PC. These are the &ldquo;Profiles&rdquo; folders in the locations of the &ldquo;AppData/Local&rdquo; and &ldquo;AppData/Roaming&rdquo; folders described above. (If you cannot see them in Windows Explorer, try this: <a href="http://windows.microsoft.com/en-us/windows/show-hidden-files#show-hidden-files=windows-7">http://windows.microsoft.com/en-us/windows/show-hidden-files#show-hidden-files=windows-7</a>)</p>
+
+<p>The actual profiles are in the folders in the Profiles directory. They begin with a random string letters and digits followed by the suffix &ldquo;.default&rdquo; and my example one above is &ldquo;zwfok92z.default&rdquo;. If you have more than one of these, check the dates and sizes. It is likely that only one is the current one.</p>
+
+<p>When you find the profile that you want, create a zip file of each. Be careful to name them appropriately so that each can be identified later. Move them to the new machine.</p>
+
+<ol>
+<li>Deploy to the Mac</li>
+</ol>
+
+
+<p>On the Mac, locate the existing Profiles, if any, folder here:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~/Library/Thunderbird/Profiles/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If Thunderbird was never run, you may not find any. If that&rsquo;s the case run Thunderbird. It is not necessary to create any accounts. Just run it and exit. Now locate the Profile folder on the Mac.</p>
+
+<p>Create a scratch area in the Mac and unzip the &ldquo;Roaming&rdquo; profile first.</p>
+
+<p>Move the resulting &ldquo;jbberish.profile&rdquo; folder to &ldquo;~/Library/Thunderbird/Profiles/&rdquo;. Caution: Be sure that any existing profiles do not have the same name because it will be overwritten in the next step.</p>
+
+<p>Open a terminal window and navigate to the scratch folder. Copy the unzipped profile to the Thunderbird location:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -pr jibberish.profile ~/Library/Thunderbird/Profiles/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In the scratch area, unzip the other profile, i.e., the &ldquo;Local&rdquo; profile. In a terminal window, &ldquo;copy&rdquo; the second folder. This will merge the two:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp -pr jibberish.profile/* ~/Library/Thunderbird/Profiles/jibberish.profile/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Newbie terminal users take note: the &ldquo;/*&rdquo; is important.</p>
+
+<ol>
+<li>Tell Thunderbird which profile to use.</li>
+</ol>
+
+
+<p>In your favorite text editor, open the &ldquo;profiles.ini&rdquo; file in &ldquo;~/Library/Thunderbird/&rdquo;. It will look something like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[General]
+</span><span class='line'>StartWithLastProfile=1
+</span><span class='line'>
+</span><span class='line'>[Profile0]
+</span><span class='line'>Name=default
+</span><span class='line'>IsRelative=1
+</span><span class='line'>Path=Profiles/zeyk92z.default</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Edit the &ldquo;Path&rdquo; to point to your &ldquo;jibberish.default&rdquo; profile and save your change.</p>
+
+<ol>
+<li>Run Thunderbird now. It should have all of your mail, accounts, address books, etc.</li>
+</ol>
+
+
+<h2>Background on the use &ldquo;Local Folders&rdquo;:</h2>
+
+<blockquote><p>I copy folders or individual messages from the server account to the &ldquo;Local Folders&rdquo; area. After the messages are moved to the local store, I delete them from the server which a) reduces storage needs in the server; b) preserves some mail for as long as I need it; and c) seems to speed up Thunderbird. Since this is an archival step, I am willing to sacrifice the ability to read them remotely.</p></blockquote>
 ]]></content>
   </entry>
   
