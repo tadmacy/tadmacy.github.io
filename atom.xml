@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2015-04-27T11:45:22-04:00</updated>
+  <updated>2015-04-27T11:49:26-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -26,17 +26,15 @@
 
 <p>One profile was here on my PC:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>%HOMEPATH%\AppData\Local\Thunderbird\Profiles\zwfok92z.default</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>    %HOMEPATH%\AppData\Local\Thunderbird\Profiles\zwfok92z.default
+</code></pre>
 
 <p>This profile held most of the settings for folders and so on but none of the locally stored mail.</p>
 
 <p>The other was here.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>%HOMEPATH%\AppData\Roaming\Thunderbird\Profiles\zwfok92z.default</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>%HOMEPATH%\AppData\Roaming\Thunderbird\Profiles\zwfok92z.default
+</code></pre>
 
 <p>Note they both had the same name and I verified that the dates on files in both locations were refreshed as I used Thunderbird.</p>
 
@@ -60,9 +58,8 @@
 
 <p>On the Mac, locate the existing Profiles, if any, folder here:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>~/Library/Thunderbird/Profiles/</span></code></pre></td></tr></table></div></figure>
-
+<pre><code>    ~/Library/Thunderbird/Profiles/
+</code></pre>
 
 <p>If Thunderbird was never run, you may not find any. If that&rsquo;s the case run Thunderbird. It is not necessary to create any accounts. Just run it and exit. Now locate the Profile folder on the Mac.</p>
 
