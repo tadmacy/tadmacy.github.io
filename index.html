@@ -9,7 +9,7 @@
   <meta name="author" content="Tad Macy">
 
   
-  <meta name="description" content="I found the installation of a github blog with Octopress to be problematic. Seems like between the the Octopress site&rsquo;s docs (which seem to be &hellip;">
+  <meta name="description" content="How to Move Thunderbird Mail with &ldquo;local&rdquo; and &ldquo;remote&rdquo; storage" from Win7 to Mac OS Many sites explain how to move &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/">How to Move Thunderbird Mail Local Storage</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2015-04-24T00:00:00-04:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>12:00 am</span></time>
+        
+           | <a href="/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/#disqus_thread"
+             data-disqus-identifier="http://tadmacy.github.io/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h1>How to Move Thunderbird Mail with &ldquo;local&rdquo; and &ldquo;remote&rdquo; storage&#8221; from Win7 to Mac OS</h1>
+
+<p>Many sites explain how to move Thunderbird mail environments easily from a PC (Win7) to a Mac (Yosemite). But, none that I attempted worked for me. That&rsquo;s probably because of my particular use of Thunderbird on this PC.</p>
+
+<p>I use Thunderbird for remote server accounts (IMAP) AND I use &ldquo;Local Folders&rdquo; to save/archive old mail and my messages from RSS feeds are stored in the &ldquo;News &amp; Blogs&rdquo; area. WHen I tried the solutions I got some of my mail and/or settings but not all and my &ldquo;Local Folders&rdquo; mail was missing. Since I use that to archive more precious things, that was a real issue.</p>
+
+<p>Looking around, I found that I had two profiles of the same name. Most solutions assumed that mail was either on a server or stored locally, or, at least, they did cover the case where the profile is split in two.</p>
+
+<p>One profile was here on my PC:</p>
+
+<pre><code>%HOMEPATH%\AppData\Local\Thunderbird\Profiles\zwfok92z.default
+</code></pre>
+
+<p>This profile held most of the settings for folders and so on but none of the locally stored mail.</p>
+
+<p>The other was here.</p>
+
+<pre><code>%HOMEPATH%\AppData\Roaming\Thunderbird\Profiles\zwfok92z.default
+</code></pre>
+
+<p>Note they both had the same name and I verified that the dates on files in both locations were refreshed as I used Thunderbird.</p>
+
+<p>Following the general instructions for moving the profile, I moved the &ldquo;Roaming&rdquo; profile first. THen I copied the &ldquo;Local&rdquo; profile over it. That merged the two.</p>
+
+<p>All my settings and local mail reappeared.</p>
+
+<p>Background on the use &ldquo;Local Folders&rdquo;: I copy folders or individual messages from the server account to the &ldquo;Local Folders&rdquo; area. After the messages are moved to the local store, I delete them from the server which a) reduces storage needs in the server; b) preserves some mail for as long as I need it; and c) seems to speed up Thunderbird. Since this is an archival step, I am willing to sacrifice the ability to read them remotely.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -585,6 +643,10 @@ Function thingy() {
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/">How to Move Thunderbird Mail Local Storage</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/11/simple-setup-of-octopress-github-blog/">How to Create an Octopress Github Blog</a>
       </li>
     
@@ -598,10 +660,6 @@ Function thingy() {
     
       <li class="post">
         <a href="/blog/2014/09/02/managing-multiple-versions-of-ruby-in-windows/">How to Create an Octopress Github Blog</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/31/extending-a-cordova-phonegap-contact-list-tutorial/">Extending a Cordova/Phonegap Contact List Tutorial</a>
       </li>
     
   </ul>
@@ -654,7 +712,7 @@ Function thingy() {
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Tad Macy -
+  Copyright &copy; 2015 - Tad Macy -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
