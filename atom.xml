@@ -4,7 +4,7 @@
   <title><![CDATA[Tad Macy]]></title>
   <link href="http://tadmacy.github.io/atom.xml" rel="self"/>
   <link href="http://tadmacy.github.io/"/>
-  <updated>2015-04-27T09:22:05-04:00</updated>
+  <updated>2015-04-27T09:29:57-04:00</updated>
   <id>http://tadmacy.github.io/</id>
   <author>
     <name><![CDATA[Tad Macy]]></name>
@@ -18,9 +18,7 @@
     <link href="http://tadmacy.github.io/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage/"/>
     <updated>2015-04-24T00:00:00-04:00</updated>
     <id>http://tadmacy.github.io/blog/2015/04/24/how-to-move-thunderbird-mail-local-storage</id>
-    <content type="html"><![CDATA[<h1>How to Move Thunderbird Mail with &ldquo;local&rdquo; and &ldquo;remote&rdquo; storage&#8221; from Win7 to Mac OS</h1>
-
-<p>Many sites explain how to move Thunderbird mail environments easily from a PC (Win7) to a Mac (Yosemite). But, none that I attempted worked for me. That&rsquo;s probably because of my particular use of Thunderbird on this PC.</p>
+    <content type="html"><![CDATA[<p>Many sites explain how to move Thunderbird mail environments easily from a PC (Win7) to a Mac (Yosemite). But, none that I attempted worked for me. That&rsquo;s probably because of my particular use of Thunderbird on this PC.</p>
 
 <p>I use Thunderbird for remote server accounts (IMAP) AND I use &ldquo;Local Folders&rdquo; to save/archive old mail and my messages from RSS feeds are stored in the &ldquo;News &amp; Blogs&rdquo; area. WHen I tried the solutions I got some of my mail and/or settings but not all and my &ldquo;Local Folders&rdquo; mail was missing. Since I use that to archive more precious things, that was a real issue.</p>
 
